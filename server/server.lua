@@ -48,27 +48,20 @@ AddEventHandler('bounty:checkcard', function()
     local Character = VorpCore.getUser(_source).getUsedCharacter
     local job = Character.job -- player job
     local count = VORPInv.getItemCount(_source, "license") -- item needed
-    if Config.NeedItem then
-     if count > 0 then -- if item is greaer than 0 then pass 
     
         if CheckTable(Jobs,job) then -- if job exist in table then pass
 
         TriggerClientEvent('bounty:findcard', _source)
 
-        else
-        TriggerClientEvent("vorp:TipRight",_source,"you need the job",4000)
-        end
-     else
-        TriggerClientEvent("vorp:TipRight",_source,"you need the job",4000)
-     end
-    else
-
-        if CheckTable(Jobs,job) then -- if job exist in table then pass
-
+        elseif count > 0 then -- if item is greaer than 0 then pass 
             TriggerClientEvent('bounty:findcard', _source)
-    
+
         else
-            TriggerClientEvent("vorp:TipRight",_source,"you need the job",4000)
+        TriggerClientEvent("vorp:TipRight",_source,"you need the job or item",4000)
         end
-    end
+
+
+
+
+        
 end)
