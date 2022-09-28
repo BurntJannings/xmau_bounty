@@ -19,3 +19,7 @@
 
 ## Credits
 - Credits to [Xmau](https://github.com/Xmaught)
+- Credits to Outsider, showing how to do job check through table
+
+
+Vorp Bounty script reworked for item needed too, turn Config.NeedItem = true for item, if not set false, jobs are set server side
