@@ -31,7 +31,6 @@ AddEventHandler('vorp_bountyhunting:valreward', function()
     -- Character.addXp(xp)
 end)
 
-Jobs = {"police","sheriff"} -- table of jobs
 
 function CheckTable(table, element)
     for k, v in pairs(table) do
@@ -49,7 +48,7 @@ AddEventHandler('bounty:checkcard', function()
     local job = Character.job -- player job
     local count = VORPInv.getItemCount(_source, "license") -- item needed
     
-        if CheckTable(Jobs,job) then -- if job exist in table then pass
+        if CheckTable(Config.Jobs,job) then -- if job exist in table then pass
 
         TriggerClientEvent('bounty:findcard', _source)
 
