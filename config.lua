@@ -5,7 +5,7 @@ Config.KillingMessage = 'Kill the target or Bring in Alive to a Lawmen for Extra
 Config.ObjectivesKilledMessage = 'You managed to kill all the targets'
 Config.DeadMessage = "You have died, you have lost your target"
 Config.Price = math.random(15,20)
-
+Config.Jobs = {"police","sheriff","bountyhunter"} -- table of jobs
 
 -- Config.Xp = 10
 
